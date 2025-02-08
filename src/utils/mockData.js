@@ -1,57 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo">
-        <img
-          src="https://cdn3.iconfinder.com/data/icons/cat-power-premium/120/cat_foodlove-512.png"
-          alt=""
-        />
-      </div>
-      <ul className="site-nav">
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li>Cart</li>
-      </ul>
-    </div>
-  );
-};
-
-const RestaurantCard = (props) => {
-  console.log("props", props);
-  const {
-    cloudinaryImageId,
-    name,
-    cuisines,
-    costForTwo,
-    location,
-    avgRating,
-    sla,
-  } = props?.resData?.info;
-  return (
-    <div className="res-card">
-      <img
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
-        }
-        alt=""
-        className="res-logo"
-      />
-      <h3>{name}</h3>
-      <h5>{cuisines.join(", ")}</h5>
-      <h3>{costForTwo}</h3>
-      <h3>{location}</h3>
-      <h3>{avgRating} Stars</h3>
-      <h3>{sla?.deliveryTime} Minutes</h3>
-    </div>
-  );
-};
-
 const resList = [
   {
     info: {
@@ -1596,30 +1542,4 @@ const resList = [
   },
 ];
 
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">
-        <input type="text" placeholder="Search" />
-        <button>Search</button>
-      </div>
-      <div className="res-container">
-        {resList.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Body />
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<AppLayout/>);
+export default resList;
