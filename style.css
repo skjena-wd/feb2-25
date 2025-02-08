@@ -67,3 +67,29 @@ img{
 .res-card h2, .res-card h3, .res-card h4, .res-card h5{
    margin-bottom: 6px;
 }
+
+.site-btn{
+   padding: 10px 20px;
+   background-color: green;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.shimmer-wrapper{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   padding: 30px 5%;
+}
+
+.shimmer-card{
+   width: 240px;
+   height: 360px;
+   background-color: #CECECE;
+}
+
+.search-container{
+   display: flex;
+}
