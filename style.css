@@ -93,3 +93,11 @@ img{
 .search-container{
    display: flex;
 }
+
+.container{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   padding: 30px 5%;
+   background-color: #fff;
+}
