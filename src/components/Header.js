@@ -1,8 +1,13 @@
 import { LOGO } from "../utils/constants";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
+
+  useEffect(() => {
+    console.log("useEffect called Header Mounted");
+  }, [btnName]);
+
   return (
     <div className="header">
       <div className="logo">
